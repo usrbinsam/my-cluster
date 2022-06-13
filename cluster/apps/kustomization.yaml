@@ -4,6 +4,7 @@ kind: Kustomization
 resources:
   # - system-upgrade
   - default
+  - flux-system
+  - game-servers
   - kube-system
   - networking
-  - game-servers
