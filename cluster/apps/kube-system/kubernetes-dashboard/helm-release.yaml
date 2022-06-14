@@ -32,6 +32,7 @@ spec:
     extraArgs:
       - --authentication-mode=basic
       - --enable-skip-login
+      - --basic-auth-file=/var/run/secrets/auth
 
     extraVolumes:
       - name: dashboard-basic-auth
