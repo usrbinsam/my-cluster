@@ -30,20 +30,7 @@ spec:
       retries: 3
   values:
     extraArgs:
-      - --authentication-mode=basic
       - --enable-skip-login
-      - --basic-auth-file=/var/run/secrets/auth
-
-    extraVolumes:
-      - name: dashboard-basic-auth
-        secret:
-          defaultMode: 420
-          secretName: dashboard-basic-auth
-
-    extraVolumeMounts:
-      - mountPath: /var/run/secrets/auth
-        name: dashboard-basic-auth
-        readOnly: true
 
     ingress:
       annotations:
