@@ -29,7 +29,7 @@ spec:
     remediation:
       retries: 3
   values:
-    args:
+    extraArgs:
       - --authentication-mode=basic
       - --enable-skip-login
 
