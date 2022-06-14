@@ -21,3 +21,8 @@ spec:
 
       server-cache:
         enabled: true
+
+    service:
+      main:
+        type: LoadBalancer
+        loadBalancerIP: ${METALLB_SATISFACTORY_ADDR}
