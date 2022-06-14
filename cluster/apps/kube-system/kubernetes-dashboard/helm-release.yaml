@@ -29,6 +29,21 @@ spec:
     remediation:
       retries: 3
   values:
+    args:
+      - --authentication-mode=basic
+      - --enable-skip-login
+
+    extraVolumes:
+      - name: dashboard-basic-auth
+        secret:
+          defaultMode: 420
+          secretName: dashboard-basic-auth
+
+    extraVolumeMounts:
+      - mountPath: /var/run/secrets/auth
+        name: dashboard-basic-auth
+        readOnly: true
+
     ingress:
       annotations:
         cert-manager.io/cluster-issuer: "letsencrypt-production"
