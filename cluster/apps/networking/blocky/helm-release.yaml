@@ -23,7 +23,6 @@ spec:
         enabled: true
       dns-udp:
         enabled: true
-
     ingress:
       main:
         enabled: true
@@ -38,12 +37,13 @@ spec:
                 pathType: Prefix
         tls:
           - hosts:
-              - "blockly.${SECRET_DOMAIN}"
+              - "blocky.${SECRET_DOMAIN}"
     config: |
       upstream:
         - 1.1.1.1
         - 1.0.0.1
-        - tcp-tls:
+        - tcp-tls:dot1dot1dot1.cloudflare-dns.com:853
+        - tcp-tls:one.one.one.one:853
       blocking:
         blackLists:
           ads:
