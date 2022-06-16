@@ -40,16 +40,11 @@ spec:
         annotations:
           traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
           traefik.ingress.kubernetes.io/router.middlewares: "networking-internal-only@kubernetescrd"
-          cert-manager.io/cluster-issuer: "letsencrypt-production"
         hosts:
           - host: "blocky.${SECRET_DOMAIN}"
             paths:
               - path: /
                 pathType: Prefix
-        tls:
-          - hosts:
-              - "blocky.${SECRET_DOMAIN}"
-            secretName: "blocky.${SECRET_DOMAIN}-tls"
     config: |
       upstream:
         default:
@@ -66,3 +61,5 @@ spec:
         clientGroupsBlock:
           default:
             - ads
+      httpPort: 4000
+      logLevel: info
