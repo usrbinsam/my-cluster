@@ -19,6 +19,9 @@ spec:
     service:
       main:
         enabled: true
+        ports:
+          http:
+            port: 4000
       dns-tcp:
         enabled: true
         annotations:
