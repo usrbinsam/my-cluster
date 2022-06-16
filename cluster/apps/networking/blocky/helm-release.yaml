@@ -21,8 +21,12 @@ spec:
         enabled: true
       dns-tcp:
         enabled: true
+        type: LoadBalancer
+        loadBalancerIP: "${METALLB_BLOCKY_IP}"
       dns-udp:
         enabled: true
+        type: LoadBalancer
+        loadBalancerIP: "${METALLB_BLOCKY_IP}"
     ingress:
       main:
         enabled: true
@@ -48,6 +52,8 @@ spec:
         blackLists:
           ads:
             - https://raw.githubusercontent.com/ookangzheng/dbl-oisd-nl/master/dbl.txt
+            - https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/gambling-porn/hosts
+
         clientGroupsBlock:
           default:
             - ads
