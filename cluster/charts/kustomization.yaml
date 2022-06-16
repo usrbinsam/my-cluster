@@ -11,6 +11,7 @@ resources:
   - kubernetes-dashboard.yaml
   - metallb.yaml
   - metrics-server.yaml
+  - prometheus-community-charts.yaml
   - stakater.yaml
   - traefik.yaml
   - weaveworks-kured.yaml

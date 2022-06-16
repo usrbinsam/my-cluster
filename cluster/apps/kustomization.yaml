@@ -6,5 +6,6 @@ resources:
   - flux-system
   - game-servers
   - kube-system
+  - monitoring
   - networking
   - system-upgrade
