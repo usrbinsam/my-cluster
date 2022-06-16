@@ -31,7 +31,7 @@ spec:
         tls:
           - hosts:
               - "prometheus.${SECRET_DOMAIN}"
-            secretName: "*.${SECRET_DOMAIN}-tls"
+            secretName: "prometheus.${SECRET_DOMAIN}-tls"
       resources:
         requests:
           cpu: 1000m
