@@ -42,6 +42,7 @@ spec:
         tls:
           - hosts:
               - "blocky.${SECRET_DOMAIN}"
+            secretName: "blocky.${SECRET_DOMAIN}-tls"
     config: |
       upstream:
         - 1.1.1.1
