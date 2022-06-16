@@ -21,10 +21,14 @@ spec:
         enabled: true
       dns-tcp:
         enabled: true
+        annotations:
+          metallb.universe.tf/allow-shared-ip: "${METALLB_BLOCKY_IP}"
         type: LoadBalancer
         loadBalancerIP: "${METALLB_BLOCKY_IP}"
       dns-udp:
         enabled: true
+        annotations:
+          metallb.universe.tf/allow-shared-ip: "${METALLB_BLOCKY_IP}"
         type: LoadBalancer
         loadBalancerIP: "${METALLB_BLOCKY_IP}"
     ingress:
