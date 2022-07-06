@@ -19,7 +19,7 @@ spec:
             secretName: discord-irc-config
       containers:
         - name: discord-irc
-          image: discord-irc/discord
+          image: discordirc/discord-irc:latest
           resources:
             limits:
               memory: "1024Mi"
