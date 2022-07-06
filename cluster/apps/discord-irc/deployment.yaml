@@ -19,6 +19,9 @@ spec:
         - name: config
           secret:
             secretName: discord-irc-config
+      securityContext:
+        runAsUser: 1000
+        runAsGroup: 1000
       containers:
         - name: discord-irc
           image: discordirc/discord-irc:latest
