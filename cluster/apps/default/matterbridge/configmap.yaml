@@ -3,6 +3,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: matterbridge-toml
+  namespace: default
 data:
   matterbridge.toml: |-
     [discord.oi]
