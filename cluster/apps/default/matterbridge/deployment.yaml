@@ -22,10 +22,10 @@ spec:
             limits:
               memory: "128Mi"
               cpu: "500m"
-            volumeMounts:
-              - name: config
-                mountPath: /etc/matterbridge/
-                readOnly: true
+          volumeMounts:
+            - name: config
+              mountPath: /etc/matterbridge/
+              readOnly: true
       volumes:
         - name: config
           secret:
