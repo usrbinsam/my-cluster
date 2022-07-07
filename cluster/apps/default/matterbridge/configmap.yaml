@@ -1,0 +1,37 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: matterbridge-toml
+data:
+  matterbridge.toml: |-
+    [discord.oi]
+    AutoWebhooks=true
+    PreserveThreading=true
+    RemoteNickFormat="<{NICK}> "
+    Server="Oi"
+    UseUserName=true
+
+    [irc.alphachat]
+    Nick="bridges"
+    NickServNick="bridges"
+    RemoteNickFormat="{NICK}"
+    Server="irc.alphachat.net:6697"
+    SkipTLSVerify=false
+    UseSASL=true
+    UseTLS=true
+    RunCommands=["AWAY :I'm just a bot.", "PRIVMSG NickServ :REGAIN bridges"]
+    NoSendJoinPart=true
+    ColorNicks=true
+
+    [[gateway]]
+    name="gateway1"
+    enable=true
+
+    [[gateway.inout]]
+    account="irc.alphachat"
+    channel="#oi"
+
+    [[gateway.inout]]
+    account="discord.oi"
+    channel="ID:862302509699825675"

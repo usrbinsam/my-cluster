@@ -26,7 +26,10 @@ spec:
             - name: config
               mountPath: /etc/matterbridge/
               readOnly: true
+          envFrom:
+            - secretRef:
+                name: matterbridge-secrets
       volumes:
         - name: config
-          secret:
-            secretName: matterbridge-toml
+          configMap:
+            name: matterbridge-toml
