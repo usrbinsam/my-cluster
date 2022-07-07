@@ -8,22 +8,24 @@ data:
   matterbridge.toml: |-
     [discord.oi]
     AutoWebhooks=true
+    EditSuffix=" (edited)"
     PreserveThreading=true
     RemoteNickFormat="{NICK}"
     Server="Oi"
     UseUserName=true
 
     [irc.alphachat]
+    ColorNicks=true
     Nick="bridges"
     NickServNick="bridges"
+    NoSendJoinPart=true
     RemoteNickFormat="<{NICK}> "
+    RunCommands=["AWAY :I'm just a bot.", "PRIVMSG NickServ :REGAIN bridges"]
     Server="irc.alphachat.net:6697"
     SkipTLSVerify=false
+    StripMarkdown=true
     UseSASL=true
     UseTLS=true
-    RunCommands=["AWAY :I'm just a bot.", "PRIVMSG NickServ :REGAIN bridges"]
-    NoSendJoinPart=true
-    ColorNicks=true
 
     [[gateway]]
     name="gateway1"
