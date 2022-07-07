@@ -9,14 +9,14 @@ data:
     [discord.oi]
     AutoWebhooks=true
     PreserveThreading=true
-    RemoteNickFormat="<{NICK}> "
+    RemoteNickFormat="{NICK}"
     Server="Oi"
     UseUserName=true
 
     [irc.alphachat]
     Nick="bridges"
     NickServNick="bridges"
-    RemoteNickFormat="{NICK}"
+    RemoteNickFormat="<{NICK}> "
     Server="irc.alphachat.net:6697"
     SkipTLSVerify=false
     UseSASL=true
