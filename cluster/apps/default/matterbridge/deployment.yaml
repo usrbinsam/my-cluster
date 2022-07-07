@@ -1,0 +1,32 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: matterbridge
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: matterbridge
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: matterbridge
+    spec:
+      containers:
+        - name: matterbridge
+          image: 42wim/matterbridge:stable
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+            volumeMounts:
+              - name: config
+                mountPath: /etc/matterbridge/
+                readOnly: true
+      volumes:
+        - name: config
+          secret:
+            secretName: matterbridge-toml
