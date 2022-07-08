@@ -9,7 +9,6 @@ resources:
   - k8s-at-home.yaml
   - k8s-gateway.yaml
   - kubernetes-dashboard.yaml
-  - metallb.yaml
   - metrics-server.yaml
   - prometheus-community-charts.yaml
   - stakater.yaml
