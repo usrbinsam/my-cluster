@@ -6,7 +6,7 @@ metadata:
   namespace: flux-system
 spec:
   type: github
-  address: https://github.com/codewizardshq/infrastructure
+  address: https://github.com/usrbinsam/my-cluster
   secretRef:
     name: github-token
 ---
