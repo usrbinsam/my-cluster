@@ -8,7 +8,7 @@ spec:
   interval: 5m
   chart:
     spec:
-      chart: hastebin
+      chart: haste-server
       version: 4.4.4
       sourceRef:
         kind: HelmRepository
