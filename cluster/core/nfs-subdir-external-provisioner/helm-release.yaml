@@ -26,3 +26,7 @@ spec:
     nfs:
       server: "${SECRET_NFS_SERVER}"
       path: "/pve"
+
+    storageClass:
+      onDelete: Retain
+      accessModes: ReadWriteMany
