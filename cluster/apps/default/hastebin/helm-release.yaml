@@ -37,6 +37,7 @@ spec:
           hajimari.io/enable: "true"
           hajimari.io/icon: "content-paste"
           hajimari.io/appName: "Hastebin"
+          external-dns/is-public: "true"
         hosts:
           - host: "paste.${SECRET_DOMAIN}"
             paths:

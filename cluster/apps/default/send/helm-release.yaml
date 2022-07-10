@@ -29,6 +29,7 @@ spec:
           hajimari.io/enable: "true"
           hajimari.io/icon: "upload"
           hajimari.io/appName: "Send"
+          external-dns/is-public: "true"
         hosts:
           - host: "send.${SECRET_DOMAIN}"
             paths:
