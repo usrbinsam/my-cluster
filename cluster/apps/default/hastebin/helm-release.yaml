@@ -35,7 +35,10 @@ spec:
         annotations:
           cert-manager.io/cluster-issuer: "letsencrypt-production"
         hosts:
-          - "paste.${SECRET_DOMAIN}"
+          - host: "paste.${SECRET_DOMAIN}"
+            paths:
+              - path: /
+                patyType: Prefix
         tls:
           - secretName: "paste.${SECRET_DOMAIN}-tls"
             hosts:
