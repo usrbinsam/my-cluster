@@ -24,12 +24,11 @@ spec:
       retries: 3
   values:
     env:
+      STORAGE_DB: "${REDIS_DB_HASTE}"
+      STORAGE_HOST: "redis-headless.database"
+      STORAGE_PASSWORD: "${REDIS_PASSWORD}"
+      STORAGE_PORT: "6379"
       STORAGE_TYPE: "redis"
-      HOST: "redis-headless.database"
-      PASSWORD: "${REDIS_PASSWORD}"
-      DB: "${REDIS_DB_HASTE}"
-      STORAGE_FILEPATH: "/config"
-
     ingress:
       main:
         enabled: true
