@@ -28,5 +28,8 @@ spec:
     master:
       persistence:
         existingClaim: redis
+    replica:
+      persistence:
+        storageClass: "nfs-client"
     metrics:
       enabled: true
