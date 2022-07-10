@@ -41,7 +41,3 @@ spec:
           - secretName: "paste.${SECRET_DOMAIN}-tls"
             hosts:
               - "paste.${SECRET_DOMAIN}"
-
-    persistence:
-      config:
-        enabled: true
