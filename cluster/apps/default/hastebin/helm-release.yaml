@@ -25,7 +25,7 @@ spec:
   values:
     env:
       STORAGE_DB: "${REDIS_DB_HASTE}"
-      STORAGE_HOST: "redis-headless.database"
+      STORAGE_HOST: "redis-master.database"
       STORAGE_PASSWORD: "${REDIS_PASSWORD}"
       STORAGE_PORT: "6379"
       STORAGE_TYPE: "redis"
