@@ -9,3 +9,4 @@ resources:
   - monitoring.yaml
   - networking.yaml
   - system-upgrade.yaml
+  - storage.yaml
