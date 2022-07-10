@@ -20,7 +20,7 @@ spec:
       REDIS_HOST: "redis-master.database"
       REDIS_PASSWORD: "${REDIS_PASSWORD}"
       REDIS_DB: "${REDIS_DB_SEND}"
-      BASE_URL: "send.${SECRET_DOMAIN}"
+      BASE_URL: "https://send.${SECRET_DOMAIN}"
     ingress:
       main:
         enabled: true
