@@ -26,6 +26,9 @@ spec:
         enabled: true
         annotations:
           cert-manager.io/cluster-issuer: "letsencrypt-production"
+          hajimari.io/enable: "true"
+          hajimari.io/icon: "upload"
+          hajimari.io/appName: "Send"
         hosts:
           - host: "send.${SECRET_DOMAIN}"
             paths:
