@@ -28,5 +28,5 @@ spec:
       path: "/pve"
 
     storageClass:
-      onDelete: Retain
+      reclaimPolicy: Retain
       accessModes: ReadWriteMany
