@@ -23,13 +23,9 @@ spec:
     remediation:
       retries: 3
   values:
+    global:
+      storageClass: "nfs-client"
     auth:
       password: ${REDIS_PASSWORD}
-    master:
-      persistence:
-        existingClaim: redis
-    replica:
-      persistence:
-        storageClass: "nfs-client"
     metrics:
       enabled: true
