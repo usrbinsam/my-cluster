@@ -34,6 +34,9 @@ spec:
         enabled: true
         annotations:
           cert-manager.io/cluster-issuer: "letsencrypt-production"
+          hajimari.io/enable: "true"
+          hajimari.io/icon: "content-paste"
+          hajimari.io/appName: "Hastebin"
         hosts:
           - host: "paste.${SECRET_DOMAIN}"
             paths:
