@@ -11,6 +11,7 @@ resources:
   - k8s-gateway.yaml
   - kubernetes-dashboard.yaml
   - metrics-server.yaml
+  - nfs-subdir-external-provisioner.yaml
   - prometheus-community-charts.yaml
   - stakater.yaml
   - traefik.yaml
