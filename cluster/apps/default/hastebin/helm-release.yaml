@@ -25,7 +25,9 @@ spec:
   values:
     env:
       STORAGE_TYPE: "redis"
-      HOST: "redis-headless.database."
+      HOST: "redis-headless.database"
+      PASSWORD: "${REDIS_PASSWORD}"
+      DB: "${REDIS_DB_HASTE}"
       STORAGE_FILEPATH: "/config"
 
     ingress:
