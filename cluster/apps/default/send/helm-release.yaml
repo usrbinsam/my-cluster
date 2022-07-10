@@ -1,0 +1,40 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: send
+  namespace: default
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: send
+      version: 1.1.0
+      sourceRef:
+        kind: HelmRepository
+        name: k8s-at-home
+        namespace: flux-system
+      interval: 5m
+  install:
+    createNamespace: true
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+  values:
+    env:
+      REDIS_HOST: "redis-headless.database"
+      REDIS_PASSWORD: "${REDIS_PASSWORD}"
+      REDIS_DB: "${REDIS_DB_SEND}"
+    ingress:
+      main:
+        enabled: true
+        annotations:
+          cert-manager.io/cluster-issuer: "letsencrypt-production"
+        hosts:
+          - "send.${SECRET_DOMAIN}"
+        tls:
+          - secretName: "send.${SECRET_DOMAIN}-tls"
+            hosts:
+              - "send.${SECRET_DOMAIN}"
