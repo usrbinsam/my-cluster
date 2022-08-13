@@ -21,6 +21,7 @@ spec:
       debug: true
     auth:
       rootPassword: ${MYSQL_ROOT_PASSWORD}
+      createDatabase: false
     metrics:
       enabled: true
     primary:
