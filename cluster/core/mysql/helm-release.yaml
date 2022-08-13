@@ -22,6 +22,10 @@ spec:
     metrics:
       enabled: true
     primary:
+      startupProbe:
+        initialDelaySeconds: 180
+        failureThreshold: 15
+        periodSeconds: 20
       persistence:
         enabled: true
         storageClass: "nfs-client"
