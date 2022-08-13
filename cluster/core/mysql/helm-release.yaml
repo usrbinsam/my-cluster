@@ -23,7 +23,7 @@ spec:
       rootPassword: ${MYSQL_ROOT_PASSWORD}
       createDatabase: false
     metrics:
-      enabled: true
+      enabled: false
     primary:
       startupProbe:
         initialDelaySeconds: 180
