@@ -5,6 +5,7 @@ resources:
   - cert-manager
   - kube-system
   - metallb-system
+  - mysql
   - namespaces
   - nfs-subdir-external-provisioner
   - redis
