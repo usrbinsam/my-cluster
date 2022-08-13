@@ -49,5 +49,4 @@ spec:
               pathType: Prefix
     serivce:
       ssh:
-        annotations:
-          loadBalancerIP: ${METALLB_GITEA_SSH_ADDR}
+        loadBalancerIP: ${METALLB_GITEA_SSH_ADDR}
