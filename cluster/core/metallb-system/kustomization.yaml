@@ -4,3 +4,4 @@ kind: Kustomization
 resources:
   - address-pool.yaml
   - helm-release.yaml
+  - l2advertisement.yaml
