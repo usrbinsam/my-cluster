@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: gitea-admin
+    namespace: default
+type: Opaque
+stringData:
+    password: ENC[AES256_GCM,data:o2BuwT2yx666qwZUTEvgXGFnZifReA==,iv:RR5E1asSbNkNVX1KZV4Eq/vfTroyADFUlfOoT/T7pEw=,tag:4uXu8qEFw6Im76gs5W2J7Q==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1el003vswpd947mtzcvdmtawkk0vnupmzdcfaa3e3ctwznqnjaqlqq3auhy
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBnQ2lYTWVsSXJGbkh1bEN6
+            NGNxbE9JdTZ2dWpiR2hHZGxOMExnUE1tMm5FCkVQY2o5SzVFRTJFNjZmeno2T1pC
+            aW94OVlWdzgxOXc4NHBxRm9YWCtOT0kKLS0tIDF0QjhPVktJNHdKbmVZVGx6aGFw
+            L1pOYXE1d1U1dWdiQTR2aHA1eStXVDAKzzGgxeNwkmqN3EA4sGxxhV2wD6kEcaSz
+            XwNMKR5Urz9DpLF+WqaZt58wIrgkLvCZwbwubKbRNfQW4m6QK/aqMw==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2022-08-13T06:05:15Z"
+    mac: ENC[AES256_GCM,data:zgiscAXYQuIB8Le9SG4j1jDGEg8tpnfJ/NlmvRpfOdyP+U9EGz5tPR0+uC5Q0IAZPP6Ew4OLke24FDb0VleK2/4tnQcrzUS2yKhnPHenFCBkn+MaOcEwLcnDsbj1IIOnn9zFqR5pD9cokaHDF6QFzzH/JVPb0UNCnMFnmOk1mXM=,iv:LFACPhY4+Xw99vn44TtynXkWh5zDLpBMIO2EOPbgcuY=,tag:YMWdRxHS+gwL38IlKAx/Lg==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.3

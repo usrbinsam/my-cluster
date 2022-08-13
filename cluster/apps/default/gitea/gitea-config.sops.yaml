@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: gitea-config
+    namespace: default
+type: Opaque
+stringData:
+    database: ENC[AES256_GCM,data:HbD2A/4kduFlMJkiWCqQZ+iwQgPZxJseiK5eTSG5SxhFpzzzOEZwdIMbZk3cvNoTXPIISwrtugBzZ9QzSBAPYCiFynBjrivhrv0zTlrVz4pEHin5OKO7bY5PrgqxcNfsfKwLDtJ3kyc=,iv:Avlycgz6PHJTPFIpkJ6Zj/BSPAoAzGzD/D7T61Aquj4=,tag:unoZhEL+HN4gCE/tbq9H4w==,type:str]
+    security: ENC[AES256_GCM,data:okdzTirPWVhRoXAwZYFT0HWIbX9qUxYycsoNxMo+54tlpRRScsx+p1HXU+t5qLHbVT/NzYjN4dQ/4fp15k8z/FprzzPzKn9AeQ==,iv:IFMRBEjG4c81xrHBFCAC83jK1PdCy5/3e4vRavS77OU=,tag:9hNvfYQaTZTElLYxWuGwag==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1el003vswpd947mtzcvdmtawkk0vnupmzdcfaa3e3ctwznqnjaqlqq3auhy
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBaVTlqQkFReUtxSFFORkp4
+            blZEbjlzcGNmakR6YjNSVURjamlKYlBRUGhRCm9CSmZqSWNWVmhSNjhyeitpbi9W
+            UXRSMEhiRVpXTk93M2RkVTdiVE5Jc00KLS0tIGxXQWQ2K3JQdlNSQVVYa1gxc1hG
+            RkpaMWdTRm5mZkJtWU4xZVJsSkg0ZEkKy7cJbMvWpDIrbhRGd+0NbTLusIEIrPfC
+            fIAvU34odTvVjGCoPVSGFmgt4X9Amjr/9xTB2wV06TsjB50v+eqHvQ==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2022-08-13T06:19:23Z"
+    mac: ENC[AES256_GCM,data:1Ad2HJuM8Z9kbjq59CVwseUl/rudKe5jU3TWgRa3bnTJErrFt4Cq+VIPYA1Lj6XTJ474QaIIOXmYEvjrxDyTgXt7JtAsteu+VXmuLlD2vDRezrxr3wWdPaIEaLYxxEAboccvnYFvq1Ka0MwDBi6sihUJpT8vE/pdqej4pMvPu2k=,iv:U+YhmZwvzEeX8yaK/FA/i3KsG+Xkru8D38eGa2yVIOM=,tag:/MXQ8hE1EanurxuUwKgdiQ==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.3
