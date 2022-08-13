@@ -17,6 +17,8 @@ spec:
       interval: 5m
   values:
     architecture: standalone
+    image:
+      debug: true
     auth:
       rootPassword: ${MYSQL_ROOT_PASSWORD}
     metrics:
