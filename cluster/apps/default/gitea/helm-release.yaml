@@ -20,6 +20,8 @@ spec:
       enabled: true
     persistence:
       storageClass: "nfs-client"
+    postgresql:
+      enabled: false
     gitea:
       admin:
         existingSecret: gitea-admin
@@ -33,6 +35,8 @@ spec:
     ingress:
       enabled: true
       className: "traefik"
+      annotations:
+        hajimari.io/icon: "git"
       hosts:
         - host: "git.${SECRET_DOMAIN}"
           paths:
