@@ -29,6 +29,8 @@ spec:
         APP_NAME: "Gitea: With a cup of tea."
         service:
           DISABLE_REGISTRATION: true
+        server:
+          DOMAIN: "git.${SECRET_DOMAIN}"
       additionalConfigSources:
         - secret:
             secretName: gitea-config
@@ -37,6 +39,9 @@ spec:
       className: "traefik"
       annotations:
         hajimari.io/icon: "git"
+        hajimari.io/enable: "true"
+        hajimari.io/appName: "Gitea"
+        traefik.ingress.kubernetes.io/router.entrypoints: "web"
       hosts:
         - host: "git.${SECRET_DOMAIN}"
           paths:
