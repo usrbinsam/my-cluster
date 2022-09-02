@@ -34,6 +34,7 @@ spec:
     persistence:
       data:
         enabled: true
+        storageClassName: nfs-client
         mountPath: /var/syncthing
         accessModes:
           - ReadWriteOnce
