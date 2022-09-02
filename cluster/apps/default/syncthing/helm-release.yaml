@@ -35,3 +35,5 @@ spec:
       data:
         enabled: true
         mountPath: /var/syncthing
+        accessModes:
+          - ReadWriteOnce
