@@ -38,3 +38,14 @@ spec:
         mountPath: /var/syncthing
         accessMode: ReadWriteOnce
         size: 8Gi
+    service:
+      listen:
+        annotations:
+          metallb.universe.tf/allow-shared-ip: "syncthing"
+        type: LoadBalancer
+        loadBalancerIP: ${METALLB_SYNCTHING_ADDR}
+      discovery:
+        annotations:
+          metallb.universe.tf/allow-shared-ip: "syncthing"
+        type: LoadBalancer
+        loadBalancerIP: ${METALLB_SYNCTHING_ADDR}
