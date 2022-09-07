@@ -26,6 +26,7 @@ spec:
     ingress:
       main:
         enabled: true
+        autoLink: true
         hosts:
           - host: "dvr.${SECRET_DOMAIN}"
             paths:
