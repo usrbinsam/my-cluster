@@ -29,6 +29,7 @@ spec:
         annotations:
           traefik.ingress.kubernetes.io/router.entrypoints: "web"
         autoLink: true
+        enableFixedMiddlewares: false
         hosts:
           - host: "dvr.${SECRET_DOMAIN}"
             paths:
