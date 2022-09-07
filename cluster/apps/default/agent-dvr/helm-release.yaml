@@ -23,3 +23,11 @@ spec:
         storageClass: nfs-client
       commands:
         storageClass: nfs-client
+    ingress:
+      main:
+        enabled: true
+        hosts:
+          - host: "dvr.${SECRET_DOMAIN}"
+            paths:
+              - path: /
+                pathType: Prefix
