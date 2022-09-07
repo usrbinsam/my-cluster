@@ -16,4 +16,5 @@ resources:
   - prometheus-community-charts.yaml
   - stakater.yaml
   - traefik.yaml
+  - true-charts.yaml
   - weaveworks-kured.yaml
