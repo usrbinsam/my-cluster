@@ -26,8 +26,8 @@ spec:
     ingress:
       main:
         enabled: true
-        annotations:
-          traefik.ingress.kubernetes.io/router.entrypoints: "web"
+        # annotations:
+        #   traefik.ingress.kubernetes.io/router.entrypoints: "web"
         autoLink: true
         enableFixedMiddlewares: false
         hosts:
