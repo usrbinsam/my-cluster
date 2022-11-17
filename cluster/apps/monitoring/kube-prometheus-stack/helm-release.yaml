@@ -20,7 +20,7 @@ spec:
   values:
     alertmanager:
       ingress:
-        enabled: true
+        enabled: false
         pathType: Prefix
         ingressClassName: "traefik"
         annotations:
@@ -35,7 +35,7 @@ spec:
             secretName: "alert-manager.${SECRET_DOMAIN}-tls"
     grafana:
       ingress:
-        enabled: true
+        enabled: false
         pathType: Prefix
         ingressClassName: "traefik"
         annotations:
