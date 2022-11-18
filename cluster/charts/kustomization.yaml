@@ -6,6 +6,7 @@ resources:
   - emberstack.yaml
   - external-dns.yaml
   - gitea.yaml
+  - grafana-charts.yaml
   - hajimari.yaml
   - jetstack.yaml
   - k8s-at-home.yaml
