@@ -34,6 +34,7 @@ spec:
               - "alert-manager.${SECRET_DOMAIN}"
             secretName: "alert-manager.${SECRET_DOMAIN}-tls"
     grafana:
+      enabled: false
       ingress:
         enabled: false
         pathType: Prefix
@@ -50,7 +51,7 @@ spec:
             secretName: "grafana.${SECRET_DOMAIN}-tls"
     prometheus:
       ingress:
-        enabled: "true"
+        enabled: false
         pathType: Prefix
         ingressClassName: "traefik"
         annotations:
