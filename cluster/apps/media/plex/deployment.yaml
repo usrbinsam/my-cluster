@@ -43,8 +43,6 @@ spec:
               "--allow-other",
               "--allow-non-empty",
               "--read-only",
-              "--umask",
-              "000",
               "--dir-cache-time",
               "96h",
               "--vfs-cache-max-size",
