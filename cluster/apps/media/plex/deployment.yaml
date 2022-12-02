@@ -84,7 +84,7 @@ spec:
               "--config",
               "/data/config/rclone.conf",
               "gcrypt:",
-              "/gdrive",
+              "/gdrive/media",
             ]
           lifecycle:
             preStop:
@@ -97,7 +97,7 @@ spec:
               cpu: "500m"
           volumeMounts:
             - name: gdrive
-              mountPath: /gdrive/gdrive
+              mountPath: /gdrive/
               mountPropagation: Bidirectional
             - name: rclone-cache
               mountPath: /data
