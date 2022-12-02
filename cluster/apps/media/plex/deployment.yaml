@@ -78,7 +78,7 @@ spec:
           resources:
             limits:
               memory: "2Gi"
-              cpu: "500m"
+              cpu: "1000m"
           volumeMounts:
             - name: gdrive
               mountPath: *path
@@ -90,7 +90,7 @@ spec:
           resources:
             limits:
               memory: "2Gi"
-              cpu: "500m"
+              cpu: "1000m"
           env:
             - name: PLEX_CLAIM
               value: claim-7_jGLBHQTYkzQEizJoaM
