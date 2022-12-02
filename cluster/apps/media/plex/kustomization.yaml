@@ -5,6 +5,7 @@ kind: Kustomization
 resources:
   # - .secret.sops.yaml
   - deployment.yaml
+  - ingress.yaml
   - plex-config-pvc.yaml
   - rclone-cache-pvc.yaml
   - service.yaml
