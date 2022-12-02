@@ -7,11 +7,11 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: plex
+      app: *app
   template:
     metadata:
       labels:
-        app: plex
+        app: *app
     spec:
       volumes:
         - name: gdrive
@@ -96,6 +96,7 @@ spec:
           volumeMounts:
             - name: gdrive
               mountPath: *path
+              mountPropagation: HostToContainer
             - name: plex-config
               mountPath: /config
             - name: rclone-cache
