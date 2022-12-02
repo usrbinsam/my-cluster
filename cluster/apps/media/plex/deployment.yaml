@@ -100,9 +100,7 @@ spec:
             - name: gdrive
               mountPath: *path
               mountPropagation: HostToContainer
-            - name: plex-config
-              mountPath: /config
             - name: plex-config2
-              mountPath: /config2
+              mountPath: /config
             - name: rclone-cache
               mountPath: /rclone
