@@ -15,7 +15,8 @@ spec:
     spec:
       volumes:
         - name: gdrive
-          emptyDir: {}
+          hostPath:
+            path: /var/lib/rclone
         - name: plex-config
           persistentVolumeClaim:
             claimName: plex-config
