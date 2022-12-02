@@ -18,6 +18,10 @@ spec:
           hostPath:
             path: &path /gdrive/media
             type: DirectoryOrCreate
+        - name: gdrive-root
+          hostPath:
+            path: /gdrive
+            type: DirectoryOrCreate
         - name: plex-config
           persistentVolumeClaim:
             claimName: plex-config
@@ -36,6 +40,8 @@ spec:
           volumeMounts:
             - name: gdrive
               mountPath: *path
+            - name: gdrive-root
+              mountPath: /media
             - name: plex-config
               mountPath: /config
             - name: rclone-cache
