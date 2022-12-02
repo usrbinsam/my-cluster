@@ -18,9 +18,6 @@ spec:
           hostPath:
             path: &path /mnt/rclone
             type: DirectoryOrCreate
-        - name: plex-config
-          persistentVolumeClaim:
-            claimName: plex-config
         - name: plex-config2
           persistentVolumeClaim:
             claimName: plex-config2
