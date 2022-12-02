@@ -36,7 +36,7 @@ spec:
           args:
             [
               "mount",
-              "-vv",
+              "-v",
               "--allow-other",
               "--allow-non-empty",
               "--read-only",
