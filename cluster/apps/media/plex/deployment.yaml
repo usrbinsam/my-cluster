@@ -16,9 +16,6 @@ spec:
       volumes:
         - name: gdrive
           emptyDir: {}
-        - name: rclone-config
-          secret:
-            secretName: rclone-config
         - name: plex-config
           persistentVolumeClaim:
             claimName: plex-config
@@ -75,13 +72,13 @@ spec:
               "--vfs-cache-max-age",
               "5000h",
               "--cache-dir",
-              "/cache",
+              "/data/cache",
               "--bwlimit-file",
               "32M",
               "--poll-interval",
               "10s",
               "--config",
-              "/config/rclone/rclone.conf",
+              "/data/config/rclone.conf",
               "gcrypt-directAlt4:",
               "/gdrive",
             ]
@@ -92,8 +89,5 @@ spec:
           volumeMounts:
             - name: gdrive
               mountPath: /gdrive
-            - name: rclone-config
-              mountPath: /config/rclone
-              readOnly: true
             - name: rclone-cache
-              mountPath: /cache
+              mountPath: /data
