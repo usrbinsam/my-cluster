@@ -36,6 +36,8 @@ spec:
               mountPath: /gdrive
             - name: plex-config
               mountPath: /config
+            - name: rclone-cache
+              mountPath: /rclone
         - name: rclone
           image: rclone/rclone:1.60
           securityContext:
