@@ -16,12 +16,8 @@ spec:
       volumes:
         - name: gdrive
           hostPath:
-            path: &path /gdrive/media
+            path: &path /mnt/rclone
             type: DirectoryOrCreate
-        - name: gdrive-root
-          hostPath:
-            path: /gdrive
-            type: Directory
         - name: plex-config
           persistentVolumeClaim:
             claimName: plex-config
@@ -78,7 +74,7 @@ spec:
             preStop:
               exec:
                 command:
-                  ["/bin/sh", "-c", "fusermount -uz /gdrive"]
+                  ["/bin/sh", "-c", "fusermount -uz /mnt/rclone"]
           resources:
             limits:
               memory: "2Gi"
@@ -98,8 +94,8 @@ spec:
           ports:
             - containerPort: 32400
           volumeMounts:
-            - name: gdrive-root
-              mountPath: /media
+            - name: gdrive
+              mountPath: *path
             - name: plex-config
               mountPath: /config
             - name: rclone-cache
