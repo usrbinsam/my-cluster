@@ -35,6 +35,7 @@ spec:
           volumeMounts:
             - name: gdrive
               mountPath: /gdrive
+              mountPropagation: Bidirectional
             - name: plex-config
               mountPath: /config
             - name: rclone-cache
@@ -97,6 +98,6 @@ spec:
           volumeMounts:
             - name: gdrive
               mountPath: /gdrive
+              mountPropagation: Bidirectional
             - name: rclone-cache
               mountPath: /data
-              mountPropagation: Bidirectional
