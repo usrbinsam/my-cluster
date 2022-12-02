@@ -1,0 +1,93 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: &app plex
+  namespace: media
+spec:
+  selector:
+    matchLabels:
+      app: plex
+  template:
+    metadata:
+      labels:
+        app: plex
+    spec:
+      volumes:
+        - name: gdrive
+          emptyDir: {}
+        - name: rclone-config
+          secret:
+            secretName: rclone-config
+        - name: plex-config
+          persistentVolumeClaim:
+            claimName: plex-config
+        - name: rclone-cache
+          persistentVolumeClaim:
+            claimName: rclone-cache
+      containers:
+        - name: *app
+          image: plexinc/pms-docker:1.29.2.6364-6d72b0cf6
+          resources:
+            limits:
+              memory: "2Gi"
+              cpu: "500m"
+          ports:
+            - containerPort: 32400
+          volumeMounts:
+            - name: gdrive
+              mountPath: /gdrive
+            - name: plex-config
+              mountPath: /config
+        - name: rclone
+          image: rclone/rclone:1.60
+          args:
+            [
+              "mount",
+              "-vv",
+              "--allow-other",
+              "--umask",
+              "000",
+              "--dir-cache-time",
+              "96h",
+              "--vfs-cache-max-size",
+              "500G",
+              "--vfs-read-chunk-size",
+              "64M",
+              "--vfs-read-chunk-size-limit",
+              "1G",
+              "--vfs-read-ahead",
+              "2G",
+              "--vfs-cache-poll-interval",
+              "5m",
+              "--vfs-cache-mode",
+              "full",
+              "--drive-pacer-min-sleep",
+              "10ms",
+              "--drive-pacer-burst",
+              "200",
+              "--vfs-cache-max-age",
+              "5000h",
+              "--cache-dir",
+              "/cache",
+              "--bwlimit-file",
+              "32M",
+              "--poll-interval",
+              "10s",
+              "--config",
+              "/config/rclone/rclone.conf",
+              "gcrypt-direct:",
+              "/gdrive",
+            ]
+          resources:
+            limits:
+              memory: "2Gi"
+              cpu: "500m"
+          volumeMounts:
+            - name: gdrive
+              mountPath: /gdrive
+            - name: rclone-config
+              mountPath: /config/rclone
+              readOnly: true
+            - name: rclone-cache
+              mountPath: /cache

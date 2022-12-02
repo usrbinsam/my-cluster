@@ -1,0 +1,14 @@
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: rclone-cache
+  namespace: media
+spec:
+  resources:
+    requests:
+      storage: 5Gi
+  storageClassName: nfs-client
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
