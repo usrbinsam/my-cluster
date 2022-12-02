@@ -21,7 +21,7 @@ spec:
         - name: gdrive-root
           hostPath:
             path: /gdrive
-            type: DirectoryOrCreate
+            type: Directory
         - name: plex-config
           persistentVolumeClaim:
             claimName: plex-config
@@ -29,23 +29,6 @@ spec:
           persistentVolumeClaim:
             claimName: rclone-cache
       containers:
-        - name: *app
-          image: plexinc/pms-docker:1.29.2.6364-6d72b0cf6
-          resources:
-            limits:
-              memory: "2Gi"
-              cpu: "500m"
-          ports:
-            - containerPort: 32400
-          volumeMounts:
-            - name: gdrive
-              mountPath: *path
-            - name: gdrive-root
-              mountPath: /media
-            - name: plex-config
-              mountPath: /config
-            - name: rclone-cache
-              mountPath: /rclone
         - name: rclone
           image: rclone/rclone:1.60
           securityContext:
@@ -108,3 +91,18 @@ spec:
               mountPropagation: Bidirectional
             - name: rclone-cache
               mountPath: /data
+        - name: *app
+          image: plexinc/pms-docker:1.29.2.6364-6d72b0cf6
+          resources:
+            limits:
+              memory: "2Gi"
+              cpu: "500m"
+          ports:
+            - containerPort: 32400
+          volumeMounts:
+            - name: gdrive-root
+              mountPath: /media
+            - name: plex-config
+              mountPath: /config
+            - name: rclone-cache
+              mountPath: /rclone
