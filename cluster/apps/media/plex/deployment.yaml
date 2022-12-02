@@ -46,6 +46,7 @@ spec:
               "mount",
               "-vv",
               "--allow-other",
+              "--allow-non-empty",
               "--umask",
               "000",
               "--dir-cache-time",
