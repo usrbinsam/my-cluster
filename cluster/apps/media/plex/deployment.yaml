@@ -41,6 +41,11 @@ spec:
               mountPath: /config
         - name: rclone
           image: rclone/rclone:1.60
+          securityContext:
+            privileged: true
+            capabilities:
+              add:
+                - SYS_ADMIN
           args:
             [
               "mount",
