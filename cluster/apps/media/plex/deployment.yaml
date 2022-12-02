@@ -82,7 +82,7 @@ spec:
               "10s",
               "--config",
               "/config/rclone/rclone.conf",
-              "gcrypt-directAlt2:",
+              "gcrypt-directAlt4:",
               "/gdrive",
             ]
           resources:
