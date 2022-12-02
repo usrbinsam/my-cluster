@@ -21,6 +21,9 @@ spec:
         - name: plex-config
           persistentVolumeClaim:
             claimName: plex-config
+        - name: plex-config2
+          persistentVolumeClaim:
+            claimName: plex-config2
         - name: rclone-cache
           persistentVolumeClaim:
             claimName: rclone-cache
@@ -99,5 +102,7 @@ spec:
               mountPropagation: HostToContainer
             - name: plex-config
               mountPath: /config
+            - name: plex-config2
+              mountPath: /config2
             - name: rclone-cache
               mountPath: /rclone

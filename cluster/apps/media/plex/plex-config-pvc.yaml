@@ -12,3 +12,17 @@ spec:
   volumeMode: Filesystem
   accessModes:
     - ReadWriteOnce
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: plex-config2
+  namespace: media
+spec:
+  resources:
+    requests:
+      storage: 20Gi
+  storageClassName: local-path
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
