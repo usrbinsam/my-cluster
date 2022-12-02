@@ -91,9 +91,6 @@ spec:
             limits:
               memory: "2Gi"
               cpu: "1000m"
-          env:
-            - name: PLEX_CLAIM
-              value: claim-7_jGLBHQTYkzQEizJoaM
           ports:
             - containerPort: 32400
           volumeMounts:
