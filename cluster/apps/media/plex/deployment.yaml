@@ -85,6 +85,11 @@ spec:
               "gcrypt:",
               "/gdrive",
             ]
+          lifecycle:
+            preStop:
+              exec:
+                command:
+                  ["/bin/sh", "-c", "fusermount -uz /gdrive"]
           resources:
             limits:
               memory: "2Gi"
