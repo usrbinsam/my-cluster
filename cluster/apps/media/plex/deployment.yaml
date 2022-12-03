@@ -76,10 +76,10 @@ spec:
               exec:
                 command:
                   ["/bin/sh", "-c", "fusermount -uz /mnt/rclone"]
-          resources:
-            limits:
-              memory: "2Gi"
-              cpu: "1000m"
+          # resources:
+          #   limits:
+          #     memory: "2Gi"
+          #     cpu: "1000m"
           volumeMounts:
             - name: gdrive
               mountPath: *path
@@ -88,10 +88,10 @@ spec:
               mountPath: /data
         - name: *app
           image: plexinc/pms-docker:1.29.2.6364-6d72b0cf6
-          resources:
-            limits:
-              memory: "2Gi"
-              cpu: "1000m"
+          # resources:
+          #   limits:
+          #     memory: "2Gi"
+          #     cpu: "1000m"
           ports:
             - containerPort: 32400
           volumeMounts:
