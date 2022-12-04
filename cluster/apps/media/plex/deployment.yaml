@@ -118,6 +118,8 @@ spec:
           env:
             - name: ADVERTISE_IP
               value: "http://${METALLB_PLEX_ADDR}:32400"
+            - name: TZ
+              value: America/Kentucky/Louisville
           volumeMounts:
             - name: gdrive
               mountPath: *path
