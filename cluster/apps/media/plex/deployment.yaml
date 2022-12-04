@@ -94,6 +94,30 @@ spec:
           #     cpu: "1000m"
           ports:
             - containerPort: 32400
+              name: http
+            - containerPort: 3005
+            - containerPort: 8324
+              name: roku
+            - containerPort: 32469
+              name: dlna-tcp
+            - containerPort: 1900
+              name: dlna-udp
+              protocol: UDP
+            - containerPort: 32410
+              name: gdm1
+              protocol: UDP
+            - containerPort: 32412
+              name: gdm2
+              protocol: UDP
+            - containerPort: 32413
+              name: gdm3
+              protocol: UDP
+            - containerPort: 32414
+              name: gdm4
+              protocol: UDP
+          env:
+            - name: ADVERTISE_IP
+              value: "http://${METALLB_PLEX_ADDR}:32400"
           volumeMounts:
             - name: gdrive
               mountPath: *path
