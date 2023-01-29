@@ -18,7 +18,7 @@ spec:
       containers:
         - name: matterbridge
           # renovate: datasource=docker.io image=42wim/matterbridge:1.25.2
-          image: 42wim/matterbridge:1.25.2
+          image: 42wim/matterbridge:1.26.0
           resources:
             limits:
               memory: "128Mi"
