@@ -91,6 +91,11 @@
       "matchDatasources": ["helm"],
       "matchUpdateTypes": ["patch"],
       "labels": ["renovate/helm", "dep/patch"]
+    },
+    {
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchCurrentVersion": "!/^0/",
+      "automerge": true
     }
   ]
 }
