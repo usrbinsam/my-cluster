@@ -6,6 +6,6 @@ resources:
   - gitea
   - hajimari
   - hastebin
-  - matterbridge
+  # - matterbridge
   - send
   - syncthing
