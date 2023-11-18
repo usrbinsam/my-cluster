@@ -19,7 +19,7 @@ spec:
     architecture: standalone
     image:
       repository: bitnami/postgresql
-      tag: 14.9.0-debian-11-r0
+      tag: 14.10.0-debian-11-r0
       debug: true
     auth:
       postgresPassword: ${MYSQL_ROOT_PASSWORD}
