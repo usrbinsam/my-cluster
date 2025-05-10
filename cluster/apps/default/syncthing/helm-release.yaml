@@ -18,7 +18,7 @@ spec:
   values:
     image:
       repository: syncthing/syncthing
-      tag: 1.29.5
+      tag: 1.29.6
     ingress:
       main:
         enabled: true
