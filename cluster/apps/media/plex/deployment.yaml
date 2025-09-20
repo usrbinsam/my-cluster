@@ -27,7 +27,7 @@ spec:
       terminationGracePeriodSeconds: 180
       containers:
         - name: rclone
-          image: rclone/rclone:1.70
+          image: rclone/rclone:1.71
           securityContext:
             privileged: true
             capabilities:
