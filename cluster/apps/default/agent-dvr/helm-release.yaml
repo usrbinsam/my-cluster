@@ -18,7 +18,7 @@ spec:
   values:
     image:
       repository: doitandbedone/ispyagentdvr
-      tag: 4.9.9.0
+      tag: 6.9.9.0
       pullPolicy: IfNotPresent
     persistence:
       config:
